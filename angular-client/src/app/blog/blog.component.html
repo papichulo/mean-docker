@@ -1,0 +1,11 @@
+<blog-header></blog-header>
+<div class="container">
+  <div [style.margin-top.px]="10" class="row">
+    <!-- Bootstrap Card -->
+    <div [style.margin-right.px]="10" class="row" *ngFor="let post of posts">
+      <h3>{{post.title}}</h3>
+      <div>{{post.content}}</div>
+      <div>{{post.tags}}</div>
+    </div>
+  </div>
+</div>

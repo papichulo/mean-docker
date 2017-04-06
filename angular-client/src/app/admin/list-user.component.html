@@ -1,0 +1,14 @@
+<admin-header></admin-header>
+<div class="container">
+    <div [style.margin-top.px]="10" class="row">
+        <h3>Users</h3>
+        <div [style.margin-right.px]="10" class="row" *ngFor="let user of users">
+            <h3>
+                <a [routerLink]="['/admin/user', user._id]">
+                    {{user.name}} <span *ngIf="user.admin==true">(Admin)</span>
+                </a>
+            </h3> 
+            <button type="button" (click)="deleteUser(user._id)" class="btn">Delete User</button>
+        </div>
+    </div>
+</div>

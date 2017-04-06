@@ -1,0 +1,29 @@
+<admin-header></admin-header>
+<div class="container">
+  <div [style.margin-top.px]="10" class="row">
+    <h3>Add new post</h3>
+    <form class="form">
+      <div class="form-group">
+        <label for="title">Title</label>
+        <input type="text" class="form-control" id="title" #title>
+      </div>
+      <div class="form-group">
+        <label for="content">Content</label>
+        <textarea class="form-control" id="content" #content></textarea>
+      </div>
+      <div class="form-group">
+        <label for="tags">Tags</label>
+        <input type="text" class="form-control" id="tags" #tags>
+      </div>
+      <button type="button" (click)="addBlogPost(title.value, content.value, tags.value)" class="btn btn-primary">Add post</button>
+   </form>
+  </div>
+  <div [style.margin-top.px]="10" class="row">
+    <!-- Bootstrap Card -->
+    <div [style.margin-right.px]="10" class="row" *ngFor="let post of posts">
+      <h3>{{post.title}}</h3>
+      <div>{{post.content}}</div>
+      <div>{{post.tags}}</div>
+    </div>
+  </div>
+</div>

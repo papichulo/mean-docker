@@ -1,0 +1,21 @@
+<admin-header></admin-header>
+<div class="container">
+    <div [style.margin-top.px]="10" class="row">
+        <h3>Add new user</h3>
+        <form class="form" (submit)="addUser(name.value, password.value, admin.value)">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" #name>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" #password>
+            </div>
+            <div class="form-group">
+                <label for="admin">Admin</label>
+                <input type="checkbox" class="" id="admin" value="true" #admin>
+            </div>
+            <input type="submit" class="btn btn-primary" value="Add user"/>
+        </form>
+    </div>
+</div>
